@@ -47,22 +47,7 @@
             font-weight: bold;
             justify-content: flex-start;
             white-space: nowrap;
-        }
-        .sidebar ul li span {
-            transition: opacity 0.3s, margin-left 0.3s;
-        }
-        .sidebar ul li span:first-child {
-            opacity: 1;
-            margin-left: 0;
-            font-size: 24px;
-        }
-        .sidebar ul li span:last-child {
-            opacity: 0;
-            margin-left: 10px;
-        }
-        .sidebar:hover ul li span:last-child {
-            opacity: 1;
-            margin-left: 10px;
+            cursor: pointer;
         }
         .guider {
             position: fixed;
@@ -96,15 +81,9 @@
     
     <div class="sidebar">
         <ul>
-            <li><span>🐾</span><span> Feral-Class</span></li>
-            <li><span>🦊</span><span> Savage-Class</span></li>
-            <li><span>🦖</span><span> Titan-Class</span></li>
-            <li><span>🌋</span><span> Cataclysm-Class</span></li>
-            <li><span>🦅</span><span> Monarch-Class</span></li>
-            <li><span>🐉</span><span> Primordial-Class</span></li>
-            <li><span>✨</span><span> Paragon-Class</span></li>
-            <li><span>🕳️</span><span> Oblivion-Class</span></li>
-            <li><span>🌌</span><span> Omega-Class</span></li>
+            <li onclick="openTiersPage()">
+                <span>📂</span><span> MechBeast Tiers</span>
+            </li>
         </ul>
     </div>
     
@@ -116,6 +95,10 @@
                 setTimeout(() => guider.style.display = "none", 2000);
             }, 15000);
         });
+        
+        function openTiersPage() {
+            window.location.href = "tiers.html";
+        }
     </script>
 </body>
 </html>
