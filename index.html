@@ -49,6 +49,13 @@
             white-space: nowrap;
             cursor: pointer;
         }
+        .sidebar ul li span.text {
+            display: none;
+            margin-left: 10px;
+        }
+        .sidebar:hover ul li span.text {
+            display: inline;
+        }
         .guider {
             position: fixed;
             bottom: 20px;
@@ -82,7 +89,7 @@
     <div class="sidebar">
         <ul>
             <li onclick="openTiersPage()">
-                <span>📂</span><span> MechBeast Tiers</span>
+                <span>⚔️</span><span class="text"> MechBeast Tiers</span>
             </li>
         </ul>
     </div>
