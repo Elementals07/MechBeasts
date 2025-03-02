@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MechBeasts</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+        
         body {
             background: linear-gradient(to right, #c0c0c0, #f5f5f5);
             color: black;
@@ -12,6 +14,17 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+        .title {
+            font-family: 'Cinzel', serif;
+            font-size: 72px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: linear-gradient(to right, #ffcc00, #ff0000);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 5px 5px 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 204, 0, 1);
+            margin-top: 50px;
         }
         .sidebar {
             position: fixed;
@@ -81,6 +94,8 @@
     </style>
 </head>
 <body>
+    <div class="title">Mech Beasts</div>
+    
     <div class="guider">
         <img src="https://via.placeholder.com/100" alt="Guider Mech">
         <p>Welcome! This website is for MechBeast novel readers. Here, you can explore different tiers of MechBeasts.</p>
