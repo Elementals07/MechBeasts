@@ -17,14 +17,19 @@
         }
         .title {
             font-family: 'Cinzel', serif;
-            font-size: 72px;
+            font-size: 80px;
             font-weight: bold;
             text-transform: uppercase;
             background: linear-gradient(to right, #ffcc00, #ff0000);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            text-shadow: 5px 5px 15px rgba(255, 0, 0, 0.8), 0 0 25px rgba(255, 204, 0, 1);
-            margin-top: 50px;
+            text-shadow: 5px 5px 20px rgba(255, 0, 0, 0.9), 0 0 30px rgba(255, 204, 0, 1);
+            margin-top: 20vh;
+            animation: shine 3s infinite alternate;
+        }
+        @keyframes shine {
+            0% { text-shadow: 5px 5px 20px rgba(255, 0, 0, 0.8), 0 0 30px rgba(255, 204, 0, 1); }
+            100% { text-shadow: 10px 10px 40px rgba(255, 0, 0, 1), 0 0 50px rgba(255, 204, 0, 1); }
         }
         .sidebar {
             position: fixed;
@@ -61,6 +66,10 @@
             justify-content: flex-start;
             white-space: nowrap;
             cursor: pointer;
+            transition: background 0.3s;
+        }
+        .sidebar ul li:hover {
+            background: rgba(255, 0, 0, 0.5);
         }
         .sidebar ul li span.text {
             display: none;
@@ -81,11 +90,7 @@
             align-items: center;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             animation: fadeIn 2s;
-        }
-        .guider img {
-            width: 100px;
-            height: 100px;
-            margin-right: 15px;
+            transition: opacity 1s ease-in-out;
         }
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -97,7 +102,7 @@
     <div class="title">Mech Beasts</div>
     
     <div class="guider">
-        <img src="https://via.placeholder.com/100" alt="Guider Mech">
+        <span style="font-size: 50px;">🤖</span>
         <p>Welcome! This website is for MechBeast novel readers. Here, you can explore different tiers of MechBeasts.</p>
     </div>
     
